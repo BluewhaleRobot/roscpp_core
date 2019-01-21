@@ -3,6 +3,7 @@ project(rostime)
 
 find_package(catkin REQUIRED COMPONENTS cpp_common)
 find_package(Boost REQUIRED COMPONENTS date_time system thread)
+list(REMOVE_ITEM Boost_LIBRARIES "-lpthread")
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
