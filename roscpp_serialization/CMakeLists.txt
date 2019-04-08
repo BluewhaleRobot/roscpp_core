@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(roscpp_serialization)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fPIC")
+
 find_package(catkin REQUIRED COMPONENTS cpp_common roscpp_traits rostime)
 catkin_package(
   INCLUDE_DIRS include
